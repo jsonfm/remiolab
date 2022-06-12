@@ -1,0 +1,25 @@
+{% extends "components/layout.html" %}
+
+{% block content %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 bg-dark py-4 position-relative">
+                <img
+                    src="https://picsum.photos/1024/768"
+                    class="img-fluid w-100"
+                    style="height:350px; object-fit:cover;"
+                >
+                <div class="position absolute">
+                    <h5 class="bg-white p-3">Movimiento Circular Uniforme</h5>
+                </div>
+            </div>
+            <div class="col-lg-9 mt-4">
+                <div class="text-center">
+                    <a href="{% url 'experiments:base' %}" class="btn btn-primary">Experimentar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

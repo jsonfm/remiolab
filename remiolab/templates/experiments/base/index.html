@@ -1,0 +1,33 @@
+{% extends "components/layout.html" %}
+
+{% block content %}
+<section class="mt-5">
+    <div class="container"> 
+        <div class="row justify-content-center">
+
+            <!-- Here you can put a title -->
+            <div class="col-md-12">
+                <h4 class="text-center mt-5 mb-4">EXPERIMENT NAME...</h4>   
+            </div>
+
+            <!-- Here comes a video frame -->
+            <div class="col-md-6">
+                <img
+                    id="cam"
+                    src="https://images.pexels.com/photos/754262/pexels-photo-754262.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    class="img-fluid"
+                    style="max-height: 400px;"
+                >
+            </div>
+
+            <!-- Here comes controls -->
+            <div class="col-md-6 p-4 d-flex flex-column align-items-center">
+                <div class="btn btn-primary my-1">Button 1</div>
+                <div class="btn btn-secondary my-1">Button 2</div>
+                <div class="btn btn-info my-2">Button 3</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

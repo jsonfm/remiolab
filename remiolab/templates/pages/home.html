@@ -1,0 +1,44 @@
+{% extends "components/layout.html" %}
+
+{% block content %}
+
+<section class="my-5">
+    <div class="bg-dark text-secondary px-4 py-5 text-center mb-4">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">¿Qué es un laboratorio Remoto?</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 text-white mb-4">Es un sistema de hardware y software que funciona através de una red y permite extender el concepto de laboratorio tradicional (lugar de experimentación) a alcances telemáticos.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Cónoce más</button>
+              <button type="button" class="btn btn-outline-light btn-lg px-4">Experimenta</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            {% for i in '123456789' %}
+            <div class="col-md-5">
+                <div class="card">
+                    <img
+                        src="https://picsum.photos/seed/picsum/1024/800"
+                        class="img-fluid rounded-top"
+                        loading="lazy"
+                        style="height: 250px !important;"
+                    >
+                    <div class="px-4 pb-4 pt-2">
+                        <h5 class="fw-bold">Algún experimento</h5>
+                        <p class="mt-2 mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed metus non neque aliquet suscipit. Quisque egestas lacus efficitur sagittis egestas. Vestibulum dictum pulvinar tortor, vitae interdum leo pulvinar sit amet. Fusce tincidunt, velit eu mollis ultricies, orci massa suscipit mauris.
+                        </p>
+                        <div class="text-center">
+                           <a href="{% url 'experiments:access' %}" class="btn btn-outline-dark" data-mdb-ripple-color="dark">Acceder</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

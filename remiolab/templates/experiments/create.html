@@ -1,0 +1,37 @@
+{% extends "components/layout.html" %}
+
+
+{% block content %}
+
+
+<section class="mt-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h5 class="mt-5 text-center">AGREGA TU EXPERIMENTO</h5>
+            <div class="col-lg-8">
+                <label class="form-label">HTML / View</label>
+                <textarea
+                    class="w-100 form-control"
+                    style="height: 300px; overflow:scroll;"
+                    placeholder="Agrega tu vista aquí.."
+                ></textarea>
+                <label class="form-label mt-4">JS / Utils</label>
+                <textarea
+                    class="w-100 form-control"
+                    style="height: 300px; overflow:scroll;"
+                    placeholder="Agrega tu lógica aquí.."
+                 ></textarea>
+                 <label class="form-label mt-4">CDN / Dependencias</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.6.0/ace.min.js" integrity="sha512-Ky7AOm/5oRYp5QzV9diL95tE/OKjzfAkugQ+llHy1scOlzIyAt2SoyriapPAZTvtZNL/xbYI1Gvt5jJYurPBdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+</script>
+
+{% endblock %}
