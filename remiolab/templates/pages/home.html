@@ -17,7 +17,8 @@
     </div>
     <div class="container">
         <div class="row g-4 justify-content-center">
-            {% for i in '123456789' %}
+            {% if experiments %}
+            {% for experiment in experiments %}
             <div class="col-md-5">
                 <div class="card">
                     <img
@@ -27,17 +28,18 @@
                         style="height: 250px !important;"
                     >
                     <div class="px-4 pb-4 pt-2">
-                        <h5 class="fw-bold">Algún experimento</h5>
+                        <h5 class="fw-bold">{{experiment.name}}</h5>
                         <p class="mt-2 mb-3">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed metus non neque aliquet suscipit. Quisque egestas lacus efficitur sagittis egestas. Vestibulum dictum pulvinar tortor, vitae interdum leo pulvinar sit amet. Fusce tincidunt, velit eu mollis ultricies, orci massa suscipit mauris.
                         </p>
                         <div class="text-center">
-                           <a href="{% url 'experiments:access' %}" class="btn btn-outline-dark" data-mdb-ripple-color="dark">Acceder</a>
+                           <a href="{% url 'experiments:detail' experiment.pk %}" class="btn btn-outline-dark" data-mdb-ripple-color="dark">Acceder</a>
                         </div>
                     </div>
                 </div>
             </div>
             {% endfor %}
+            {% endif %}
         </div>
     </div>
 </section>

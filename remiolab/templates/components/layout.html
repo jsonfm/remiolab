@@ -57,26 +57,29 @@
   </head>
 
   <body>
-
+    
     {% include 'components/header.html' %}
-    <div class="container">
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-        {% endfor %}
-      {% endif %}
 
-    </div>
+    <main class="mt-5">
+      <div class="container">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
 
-    {% block content %}
-    <p>Use this document as a way to quick start any new project.</p>
-    {% endblock content %}
+      {% block content %}
+      <p>Use this document as a way to quick start any new project.</p>
+      {% endblock content %}
 
-    {% block modal %}{% endblock modal %}
+      {% block modal %}{% endblock modal %}
 
+
+    </main>
     {% block inline_javascript %}
     {% comment %}
     Script tags with only code, no src (defer by default). To run
@@ -93,6 +96,5 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
     ></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
   </body>
 </html>
