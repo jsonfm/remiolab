@@ -1,13 +1,23 @@
 {% extends 'components/layout.html' %}
+<section class="bg-white">
 
 {% block content %}
+
 {{object.html | safe}}
 
-
 {% endblock %}
+
 {% block scripts %}
+<script>
+    const body = document.getElementById("body");
+    const main = document.createElement("main");
+    body.classList.remove("bg-dark");
+    main.style.minHeight = "100vh";
+</script>
+
 
 {{object.dependencies | safe}}
+
 
 <script type="text/javascript">
 {{object.constants | safe }}
@@ -19,3 +29,4 @@
 
 
 {% endblock %}
+</section>

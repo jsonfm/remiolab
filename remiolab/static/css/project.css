@@ -1,4 +1,7 @@
 /* These styles are generated from project.scss. */
+main {
+  overflow-x: hidden;
+}
 
 .alert-debug {
   color: black;
@@ -10,4 +13,19 @@
   color: #b94a48;
   background-color: #f2dede;
   border-color: #eed3d7;
+}
+
+
+.bg-orange {
+  background-color: rgb(255, 98, 0) !important;
+  transition: all ease-in-out .25s;
+}
+
+.text-orange {
+  color: rgb(255, 98, 0) !important;
+}
+
+
+.scrolled {
+  background: rgba(17, 17, 17, 0.487) !important;
 }

@@ -1,9 +1,11 @@
-from django.views.generic import DetailView, RedirectView, UpdateView, TemplateView, CreateView
+from django.views.generic import ListView, DetailView, RedirectView, UpdateView, TemplateView, CreateView
 from remiolab.experiments.models import Experiment
 
 
-class ExperimentAccessView(TemplateView):
+class ExperimentAccessView(DetailView):
     template_name = "experiments/access.html"
+    model = Experiment
+    context_object_name = "experiment"
 
 
 class ExperimentBaseView(TemplateView):
@@ -17,3 +19,10 @@ class ExperimentDetailView(DetailView):
 
 class ExperimentCreateView(TemplateView):
     template_name = "experiments/create.html"
+
+
+class ExperimentsListView(ListView):
+    template_name = "experiments/list.html"
+    model = Experiment
+    paginate_by = 12
+    context_object_name = "experiments"

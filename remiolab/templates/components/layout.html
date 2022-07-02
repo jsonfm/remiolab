@@ -39,6 +39,9 @@
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endcompress %}
     {% endblock %}
+
+    {% block styles %} {% endblock %}
+
     <!-- Le javascript
     ================================================== -->
     {# Placed at the top of the document so pages load faster with defer #}
@@ -56,11 +59,11 @@
 
   </head>
 
-  <body>
+  <body class="bg-dark" id="body">
     
     {% include 'components/header.html' %}
 
-    <main class="mt-5">
+    <main id="main" style="min-height:100vh;">
       <div class="container">
         {% if messages %}
           {% for message in messages %}
@@ -80,6 +83,8 @@
 
 
     </main>
+    {% include "components/footer.html" %}
+
     {% block inline_javascript %}
     {% comment %}
     Script tags with only code, no src (defer by default). To run

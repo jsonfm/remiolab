@@ -2,38 +2,161 @@
 
 {% block content %}
 
-<section class="my-5">
-    <div class="bg-dark text-secondary px-4 py-5 text-center mb-4">
+<section class="mt-5">
+    <div class="bg-orange text-secondary px-4 py-5 text-center">
         <div class="py-5">
-          <h1 class="display-5 fw-bold text-white">¿Qué es un laboratorio Remoto?</h1>
+          <h1 class="display-5 fw-bold text-white">¿Qué es un Laboratorio Remoto?</h1>
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 text-white mb-4">Es un sistema de hardware y software que funciona através de una red y permite extender el concepto de laboratorio tradicional (lugar de experimentación) a alcances telemáticos.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Cónoce más</button>
-              <button type="button" class="btn btn-outline-light btn-lg px-4">Experimenta</button>
+              <a href="{% url 'pages:about' %}" class="btn btn-dark btn-lg px-4 me-sm-3 fw-bold">Cónoce más</a>
+              <a href="{% url 'experiments:list' %}" class="btn btn-light btn-lg px-4">Experimenta</a>
             </div>
           </div>
         </div>
     </div>
+</section>
+
+<section class="bg-white py-5">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h4 class="text-orange mb-3">CARACTERÍSTICAS</h4>
+                <p class="mb-4">
+                    Los laboratorios remotos, son conjuntos de infraestructura real (experimentos), dispersos por el mundo y accesibles a través de internet. Cada experimento es un dispositivo compuesto por dos rasgos distintivos:
+                </p>
+                <div class="card">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img
+                                class="rounded-start"
+                                width="100%"
+                                src="https://images.pexels.com/photos/1472443/pexels-photo-1472443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            >
+                        </div>
+                        <div class="col-md-6 px-5 py-3">
+                            <h4>Hardware</h4>
+                            <p>Es el elemento físico/tangible que constituye un dispositivo o sistema de control. En general, abarca circuitería, computadoras, microcontroladores, sensores y acutadores.</p>
+                            <hr>
+                        </div>
+                        <div class="col-md-6 px-5 py-3">
+                            <h4>Software</h4>
+                            <p>Es el elemento intangible del dispositivo. En concreto, se refiere a la lógica, o programas que coordinan el funcionamiento del mismo.</p>
+                            <hr>
+                        </div>
+                        <div class="col-md-6">
+                            <img
+                                class="rounded-end"
+                                width="100%"
+                                src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-white bg-dark">
+    <div class="col-lg-1 py-3 bg-orange d-none d-md-flex"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h4 class="text-center text-orange">SERVICIOS</h4>
+                <hr class="text-white">
+                <p class="text-center mb-4">
+                    Los laboratorios remotos ofrecen diversas funcionalidades a sus usuarios, para lograr su cometido: brindar una experencia de laboratorio.
+                </p>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center mb-5 mt-1">
+            <div class="col-md-4 text-center ">
+                <div class="bg-orange p-5 shadow rounded-3">
+                    <img
+                        class="rounded-circle mb-3"
+                        width="220px"
+                        height="220px"
+                        src="https://images.pexels.com/photos/7172701/pexels-photo-7172701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    >
+                    <h6 class="mb-0">
+                        STREAMING
+                    </h6>
+                    <hr
+                        color="white"
+                        height="5px"
+                    >
+                    <p>
+                        Una parte de experimentos de un laboratorio remoto, tienen un apartado visual peculiar; pues es através de la observación que el experimentador puede sacar conclusiones.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center ">
+                <div class="bg-orange p-5 shadow rounded-3">
+                    <img
+                        class="rounded-circle mb-3"
+                        width="220px"
+                        height="220px"
+                        src="https://images.pexels.com/photos/7172701/pexels-photo-7172701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    >
+                    <h6 class="mb-0">
+                        STREAMING
+                    </h6>
+                    <hr
+                        color="white"
+                        height="5px"
+                    >
+                    <p>
+                        Una parte de experimentos de un laboratorio remoto, tienen un apartado visual peculiar; pues es através de la observación que el experimentador puede sacar conclusiones.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center ">
+                <div class="bg-orange p-5 shadow rounded-3">
+                    <img
+                        class="rounded-circle mb-3"
+                        width="220px"
+                        height="220px"
+                        src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    >
+                    <h6 class="mb-0">
+                        STREAMING
+                    </h6>
+                    <hr
+                        color="white"
+                        height="5px"
+                    >
+                    <p>
+                        Una parte de experimentos de un laboratorio remoto, tienen un apartado visual peculiar; pues es através de la observación que el experimentador puede sacar conclusiones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-white py-4">
+    <div class="container">
+        <h4 class="text-center text-white mb-4">EXPERIMENTOS</h4>
         <div class="row g-4 justify-content-center">
             {% if experiments %}
             {% for experiment in experiments %}
             <div class="col-md-5">
                 <div class="card">
                     <img
-                        src="https://picsum.photos/seed/picsum/1024/800"
-                        class="img-fluid rounded-top"
+                        src="https://picsum.photos/1024/768"
+                        class="img-fluid rounded-top bg-white"
                         loading="lazy"
                         style="height: 250px !important;"
                     >
                     <div class="px-4 pb-4 pt-2">
                         <h5 class="fw-bold">{{experiment.name}}</h5>
                         <p class="mt-2 mb-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed metus non neque aliquet suscipit. Quisque egestas lacus efficitur sagittis egestas. Vestibulum dictum pulvinar tortor, vitae interdum leo pulvinar sit amet. Fusce tincidunt, velit eu mollis ultricies, orci massa suscipit mauris.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed metus non neque aliquet suscipit. Quisque egestas lacus efficitur sagittis egestas. Vestibulum dictum pulvinar tortor, vitae interdum leo pulvinar sit amet. Fusce tincidunt.
                         </p>
                         <div class="text-center">
-                           <a href="{% url 'experiments:detail' experiment.pk %}" class="btn btn-outline-dark" data-mdb-ripple-color="dark">Acceder</a>
+                           <a href="{% url 'experiments:access' experiment.pk %}" class="btn btn-outline-dark" data-mdb-ripple-color="dark">Acceder</a>
                         </div>
                     </div>
                 </div>

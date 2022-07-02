@@ -1,1 +1,57 @@
-{% extends "base.html" %}
+{% extends "components/layout.html" %}
+
+
+{% block styles %}
+<style>
+    .img{
+        height: 100px;
+        width: auto;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<section class="bg-white py-5 mt-5">
+    <div class="container">
+        <div class="row justify-content-center pb-5 pt-1">
+            <div class="col-lg-6">
+                <p> En este proyecto me he planteado ofrecer herramientas abiertas para el desarrollo de <b>laboratorios remotos.</b></p>
+                <div class="card p-4 bg-orange text-white mb-4 align-self-end">
+                    En este espacio demostrativo, puedes desarrollar tus ideas y ponerlas en práctica a través de experimentos. Diseña circuitos, crea algoritmos, realiza interfaces de usuario para controlar tus innvenciones de forma remota.
+                </div>
+    
+                <div class="card p-4 bg-dark text-white mb-4">
+                   <p class="mb-3">Esta plataforma hace uso de diversas tecnologías:</p>
+                  <ul>
+                    <li>
+                        <a>SocketIO</a>
+                    </li>
+                    <li>
+                        <a>Arduino</a>
+                    </li>
+                    <li>
+                        <a>Python</a>
+                    </li>
+                  </ul>
+                </div>
+    
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-align-right">
+                        <img
+                            loading="lazy"
+                            class="img"
+                            src="https://www.todavianose.com/wp-content/uploads/2015/02/Raspberry-Pi-Logo1-620x350.png"
+                        >
+                    </div>
+                    <div class="col-md-6">
+                        <img
+                            loading="lazy"
+                            class="img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/ArudinoLogo_%C2%AE.svg/1200px-ArudinoLogo_%C2%AE.svg.png"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
