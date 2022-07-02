@@ -1,0 +1,76 @@
+{% extends "components/layout.html" %}
+
+{% block content %} 
+<section class="bg-white">
+    <div class="container py-5">
+
+        <div class="row justify-content-center pt-5">
+            <!-- <div class="col-lg-3">
+                <div class="card">
+                    <h4>Categorías</h4>
+                </div>
+            </div> -->
+            <div class="col-lg-12">
+                <h3 class="text-center text-orange">EXPERIMENTOS</h3>
+
+                <div class="input-group my-3 d-flex justify-content-center">
+                    <div id="search-autocomplete" class="form-outline w-75">
+                        <input type="search" id="form1" class="form-control" />
+                        <label class="form-label" for="form1">Busca un experimento...</label>
+                    </div>
+                    <button type="button" class="btn btn-dark">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+        
+
+                <div class="row justify-content-center g-4 mt-0">
+                    {% for experiment in experiments %}
+                    <div class="col-md-4">
+                        <div class="card rounded-4 shadow">
+                            <div class="position-relative">
+                                <img
+                                    class="w-100 rounded-top"
+                                    height="200px"
+                                    src="https://picsum.photos/200/300"
+                                >
+                                <div class="position absolute top-100 start-50">
+                                    <h5 class="bg-dark text-white p-3 my-0">{{experiment.name}}</h5>
+                                </div>
+                            </div>
+
+                            <div class="px-4 pt-2 d-flex align-items-center" style="min-height:60px;">
+                               <p>
+                                    {% if experiment.description %}
+                                    {{experiment.description}}
+                                    {% else %}
+                                    ...
+                                    {% endif %}
+                               </p>
+                               
+                            </div>
+                            <a href="{% url 'experiments:access' experiment.pk %}" class="text-center text-orange mb-3">Acceder >></a>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+const navbar = document.getElementById('navbar');
+navbar.classList.remove('bg-orange');
+navbar.classList.remove('navbar-dark');
+navbar.classList.add('navbar-light');
+navbar.classList.add('bg-white')
+
+
+</script>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "components/layout.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.2.2/photoswipe.css" integrity="sha512-aYZebRqOKTENn+6dnGG8LESiKfRv+2Oi1UTr/u47p0DKdYCih17xTP+/MrTzDPTSvdpSgTwzp5aB3QfO1I+mEA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock %}
+
+{% block content %}
+<section>
+    <div class="row g-0">
+        {% for i in '12345691234512321322' %}
+        <div class="col-md-4 col-lg-3">
+            <img
+                loading="lazy"
+                src="https://picsum.photos/1024/768"
+                class="w-100"
+            >
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %} 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.2.2/photoswipe-lightbox.esm.js" integrity="sha512-DEcCaHLZwS62vGCByBOt4q0my3cpEn4qykstoF2Dk52USU3NbZlgqItaW2r9HFQ1NtmMwHoLxTN6fXvEs8lxEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const navbar = document.getElementById('navbar');
+    window.onscroll = function() {scrollFunction()};
+    
+function scrollFunction() {
+    const scrollValue = window.pageYOffset;
+    console.log("scrolling...", scrollValue)
+
+    if(scrollValue > 50){
+        navbar.classList.add('scrolled')
+    }else{
+        navbar.classList.remove('scrolled')
+    }
+}
+</script>
+{% endblock %}
